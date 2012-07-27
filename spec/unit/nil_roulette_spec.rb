@@ -1,15 +1,15 @@
 require "spec_helper"
-require "nil_roulette"
-require "digest"
 
 describe "Nilroulette" do
+  include CoreHelper
+
   it "should just fuckin call that shit" do
-    nil.send(Digest::SHA1.hexdigest("#{Time.now.utc.to_i * rand(9001)}"))
+    send_random_method
   end
 
   it "shouldn't be a little bitch" do
     begin
-      nil.send(Digest::SHA1.hexdigest("#{Time.now.utc.to_i * rand(9001)}"))
+      send_random_method
     rescue Exception => e
       error = e
     ensure
