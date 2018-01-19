@@ -3,11 +3,11 @@ require "spec_helper"
 describe "Nilroulette" do
   include CoreHelper
 
-  it "should just fuckin call that shit" do
+  it "should just fuckin call that 💩" do
     send_random_method
   end
 
-  it "shouldn't be a little bitch" do
+  it "shouldn't be a 👼" do
     begin
       send_random_method
     rescue Exception => e
